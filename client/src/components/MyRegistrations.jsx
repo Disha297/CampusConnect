@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Card, Container } from 'react-bootstrap';
 
-const API_BASE_URL = 'http://localhost:5000/api';
+const API_BASE_URL = 'https://campusconnect-xob1.onrender.com';
 
 const MyRegistrations = () => {
   const [events, setEvents] = useState([]);
