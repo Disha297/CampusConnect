@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { Form, Button, Container, Card, Alert } from 'react-bootstrap';
 
-const API_BASE_URL = 'http://localhost:5000/api';
+const API_BASE_URL = 'https://campusconnect-xob1.onrender.com';
 
 const Login = () => {
   const [email, setEmail] = useState('');
