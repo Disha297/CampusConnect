@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Card, Container } from 'react-bootstrap';
 
+const API_BASE_URL = 'http://localhost:5000/api';
+
 const MyRegistrations = () => {
   const [events, setEvents] = useState([]);
   const [error, setError] = useState('');
@@ -19,7 +21,7 @@ const MyRegistrations = () => {
       try {
         const token = localStorage.getItem('token');
 
-        const response = await axios.get('http://localhost:5000/api/my-registrations', {
+        const response = await axios.get(API_BASE_URL + '/my-registrations', {
           headers: {
             Authorization: `Bearer ${token}`,
           },

@@ -3,6 +3,8 @@ import { Form, Button, Container, Alert } from 'react-bootstrap';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
+const API_BASE_URL = 'http://localhost:5000/api';
+
 const EventForm = () => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
@@ -19,7 +21,7 @@ const EventForm = () => {
 
     try {
       const token = localStorage.getItem('token');
-      const res = await axios.post('http://localhost:5000/api/events', {
+      const res = await axios.post(API_BASE_URL +'/events', {
         title,
         description,
         date,
