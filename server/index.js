@@ -10,7 +10,7 @@ const eventRoutes = require('./routes/events');
 const registerRoutes = require('./routes/register');
 
 // Use an environment variable for the CORS origin.
-const clientUrl = process.env.CLIENT_URL || 'http://localhost:5173';
+const clientUrl = process.env.CLIENT_URL || 'https://localhost:5173';
 app.use(cors({ origin: clientUrl, credentials: true }));
 
 app.use(express.json());
