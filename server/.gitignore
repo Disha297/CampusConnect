@@ -1,0 +1,18 @@
+# Log files
+*.log
+logs/
+
+# Temporary files
+*.tmp
+temp/
+
+# Build artifacts
+build/
+dist/
+
+# Node.js dependencies
+node_modules/
+
+# Sensitive configuration files
+.env
+config/secrets.js
