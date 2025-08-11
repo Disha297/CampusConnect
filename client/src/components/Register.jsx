@@ -3,7 +3,7 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import { Form, Button, Container, Card, Alert } from 'react-bootstrap';
 
-const API_BASE_URL = '';
+const API_BASE_URL = import.meta.env.VITE_API_URL
 
 const Register = () => {
   const [email, setEmail] = useState('');
@@ -15,7 +15,7 @@ const Register = () => {
     e.preventDefault();
     setError('');
     try {
-      const res = await axios.post(API_BASE_URL + '/auth/register', {
+      const res = await axios.post(`${API_BASE_URL}api/auth/register`, {
         email,
         password,
       });

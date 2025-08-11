@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { Card, Container } from 'react-bootstrap';
 
-const API_BASE_URL = '';
+const API_BASE_URL = import.meta.env.VITE_API_URL
 
 const MyRegistrations = () => {
   const [events, setEvents] = useState([]);
@@ -20,8 +20,7 @@ const MyRegistrations = () => {
     const fetchMyEvents = async () => {
       try {
         const token = localStorage.getItem('token');
-
-        const response = await axios.get(API_BASE_URL + '/my-registrations', {
+        const response = await axios.get(`${API_BASE_URL}api/my-registrations`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
