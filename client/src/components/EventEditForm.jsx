@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Form, Button, Container, Alert } from 'react-bootstrap';
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:5000/api';
+const API_BASE_URL = '';
 
 const EventEditForm = ({ event, onUpdateSuccess, onCancel, showAlert }) => {
   const [formData, setFormData] = useState({
@@ -40,7 +40,7 @@ const EventEditForm = ({ event, onUpdateSuccess, onCancel, showAlert }) => {
       };
       console.log('Sending to backend:', updatedEvent); 
       const res = await axios.put(
-        `${API_BASE_URL}/events/${event._id}`,
+        `${API_BASE_URL}/api/events/${event._id}`,
         updatedEvent,
         {
           headers: { Authorization: `Bearer ${token}` },
