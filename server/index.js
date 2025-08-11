@@ -9,7 +9,7 @@ const authRoutes = require('./routes/auth');
 const eventRoutes = require('./routes/events');
 const registerRoutes = require('./routes/register');
 
-// Use an environment variable for the CORS origin.
+// environment variable for the CORS origin.
 const clientUrl = process.env.CLIENT_URL || 'https://localhost:5173';
 app.use(cors({ origin: clientUrl, credentials: true }));
 
