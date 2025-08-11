@@ -40,7 +40,7 @@ const EventEditForm = ({ event, onUpdateSuccess, onCancel, showAlert }) => {
       };
       console.log('Sending to backend:', updatedEvent); 
       const res = await axios.put(
-        `${API_BASE_URL}/api/events/${event._id}`,
+        `${API_BASE_URL}/events/${event._id}`,
         updatedEvent,
         {
           headers: { Authorization: `Bearer ${token}` },

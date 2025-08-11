@@ -21,7 +21,7 @@ const EventForm = () => {
 
     try {
       const token = localStorage.getItem('token');
-      const res = await axios.post(API_BASE_URL +'/api/events', {
+      const res = await axios.post(API_BASE_URL +'/events', {
         title,
         description,
         date,

@@ -21,7 +21,7 @@ const MyRegistrations = () => {
       try {
         const token = localStorage.getItem('token');
 
-        const response = await axios.get(API_BASE_URL + '/api/my-registrations', {
+        const response = await axios.get(API_BASE_URL + '/my-registrations', {
           headers: {
             Authorization: `Bearer ${token}`,
           },

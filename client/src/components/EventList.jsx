@@ -24,7 +24,7 @@ const EventList = () => {
   const fetchEvents = async () => {
     const token = localStorage.getItem('token');
     try {
-      const res = await axios.get(API_BASE_URL+"/api/events", {
+      const res = await axios.get(API_BASE_URL+"/events", {
         headers: { Authorization: `Bearer ${token}` },
       });
       
@@ -41,7 +41,7 @@ const EventList = () => {
   const fetchMyRegistrations = async () => {
     const token = localStorage.getItem('token');
     try {
-      const res = await axios.get(API_BASE_URL+'/api/my-registrations', {
+      const res = await axios.get(API_BASE_URL+'/my-registrations', {
         headers: { Authorization: `Bearer ${token}` },
       });
 
@@ -69,7 +69,7 @@ const EventList = () => {
   const handleDelete = async (eventId) => {
     const token = localStorage.getItem('token');
     try {
-      await axios.delete(`${API_BASE_URL+"/api/events"}/${eventId}`, {
+      await axios.delete(`${API_BASE_URL+"/events"}/${eventId}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
       setEvents(events.filter((e) => e._id !== eventId));
@@ -84,7 +84,7 @@ const EventList = () => {
     const token = localStorage.getItem('token');
     try {
       await axios.post(
-        `${API_BASE_URL}/api/register/${eventId}`,
+        `${API_BASE_URL}/register/${eventId}`,
         {},
         { headers: { Authorization: `Bearer ${token}` } }
       );
