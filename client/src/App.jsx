@@ -6,7 +6,7 @@ import EventList from './components/EventList';
 import Navbar from './components/Navbar';
 import MyRegistrations from './components/MyRegistrations';
 import PrivateRoute from './components/PrivateRoute';
-import EventEditForm from './components/EventEditForm';
+//import EditEventPage from './components/EditEventPage';
 
 function App() {
   return (
@@ -20,7 +20,6 @@ function App() {
           <Route path="/" element={<EventList />} />
           <Route path="/create-event" element={<PrivateRoute><EventForm /></PrivateRoute>} />
           <Route path="/my-registrations" element={<PrivateRoute><MyRegistrations /></PrivateRoute>}/>
-          <Route path="/EventEditForm" element={<PrivateRoute><EventEditForm /></PrivateRoute>}/>
 
         </Routes>
       </div>
