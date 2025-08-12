@@ -9,13 +9,12 @@ const EventEditForm = ({ event, onUpdateSuccess, onCancel, showAlert }) => {
     title: '',
     description: '',
     location: '',
-    datetimeLocal: '',
+    date: '',
     imageUrl: '',
   });
 
   useEffect(() => {
     if (event) {
-      const datetimeLocal = new Date(event.date).toISOString().slice(0, 16);
       setFormData({
         title: event.title,
         description: event.description,
@@ -37,7 +36,7 @@ const EventEditForm = ({ event, onUpdateSuccess, onCancel, showAlert }) => {
     try {
       const updatedEvent = {
         ...formData,
-        date: new Date(formData.datetimeLocal).toISOString(),
+        date: new Date(formData.date).toISOString(),
       };
       console.log('Sending to backend:', updatedEvent);
       const res = await axios.put(
