@@ -20,7 +20,7 @@ const EventEditForm = ({ event, onUpdateSuccess, onCancel, showAlert }) => {
         title: event.title,
         description: event.description,
         location: event.location,
-        date: event.date.split('T')[0],
+        date: datetimeLocal,
         imageUrl: event.imageUrl || '',
       });
     }
@@ -92,7 +92,7 @@ const EventEditForm = ({ event, onUpdateSuccess, onCancel, showAlert }) => {
         <Form.Group controlId="formEventDate" className="mb-3">
           <Form.Label>Date</Form.Label>
           <Form.Control
-            type="date"
+            type="datetime-local"
             name="date"
             value={formData.date}
             onChange={handleInputChange}
