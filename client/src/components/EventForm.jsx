@@ -21,10 +21,11 @@ const EventForm = () => {
 
     try {
       const token = localStorage.getItem('token');
+      const formattedDate = new Date(date).toISOString();
       const res = await axios.post(`${API_BASE_URL}api/events`, {
         title,
         description,
-        date,
+        date: formattedDate,
         location,
         imageUrl
       }, {
