@@ -28,6 +28,7 @@ const EventEditForm = ({ event, onUpdateSuccess, onCancel, showAlert }) => {
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
+    console.log(`Input changed: Name=${name}, Value=${value}`); 
     setFormData({ ...formData, [name]: value });
   };
 
