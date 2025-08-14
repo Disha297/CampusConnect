@@ -6,7 +6,6 @@ import EventList from './components/EventList';
 import Navbar from './components/Navbar';
 import MyRegistrations from './components/MyRegistrations';
 import PrivateRoute from './components/PrivateRoute';
-//import EditEventPage from './components/EditEventPage';
 
 function App() {
   return (
